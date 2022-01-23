@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 10</title>
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+    body {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px){
+      body {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    </style>
+    <script type="text/javascript">
+    
+        $(function(){
+          $("#Header").load("../nav2.html");
+       });
+     
+     </script>
+  </head>
+  <body>
+    <header>
+        <div id="Header"></div>
+    </header>
+    <h1>第10回課題</h1>
+    <p>Webサイトフレームワークのレファレンスサイトを読み、index.htmlをデザインする。</p>
+    <h2>レファレンスサイトを読んでわかったこと</h2>
+    <h3>UIkit</h3>
+        <ul>
+            <li>ダウンロードすると、CSSファイルとJavaScriptファイルが入ったzipファイルを展開することができる。</li>
+            <li>インストールとコンパイルが完了したら、対象のhtmlファイルのコードのheadに以下を記述する。UIkit icon libraryも含まれている。基本的なセットアップはこれで完了。</li>
+            <pre>
+              <code>&lt;head&gt;
+                &lt;title&gt;Title&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;css/uikit.min.css&quot; /&gt;
+                &lt;script src=&quot;js/uikit.min.js&quot;&gt;&lt;/script&gt;
+                &lt;script src=&quot;js/uikit-icons.min.js&quot;&gt;&lt;/script&gt;
+            &lt;/head&gt;</code>
+            </pre>
+            <li>UIkitは作業効率の観点から、AtomやSublime Textなどのsolid code editorでの使用が推奨されている。</li>
+            <li>UIkitはあらゆるモダンブラウザにおいて正常な動作が可能である。</li>
+        </ul>
+    <h3>Bootstrap</h3>
+        <ul>
+            <li>UIkitと同様にCSSファイルとJavaScriptファイルがダウンロードできる。</li>
+            <li>インストールとコンパイルが完了したら、対象のhtmlファイルのコードのheadに以下を記述する。</li>
+            <pre>
+              <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;</code>
+            </pre>
+            <pre>
+              <code>&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot; integrity=&quot;sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot; integrity=&quot;sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</code>
+            </pre>
+            <li>また、上記のコードを含んだhtml全体のテンプレートも公開されている。</li>
+            <pre>
+              <code>&lt;!doctype html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                  &lt;head&gt;
+                    &lt;!-- Required meta tags --&gt;
+                    &lt;meta charset=&quot;utf-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+                
+                    &lt;!-- Bootstrap CSS --&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;
+                
+                    &lt;title&gt;Hello, world!&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+                
+                    &lt;!-- Optional JavaScript --&gt;
+                    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+                    &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot; integrity=&quot;sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot; integrity=&quot;sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;</code>
+            </pre>
+            <li>Responsive meta tagの使用も推奨されている。</li>
+            <pre>
+              <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;</code>
+            </pre>
+            <li>Google MapsやGoogle Custom Search Engineでのbox-sizingに関する不具合は、以下のコードを記述することで回避する。</li>
+            <pre>
+              <code>.selector-for-some-widget {
+                box-sizing: content-box;
+              }</code>
+            </pre>
+        </ul>
+    <h3>vue,js</h3>
+        <ul>
+            <li>Vueは増加的に適応化するようにデザインされたprogressive frameworkである。</li>
+            <li>core libraryはview　layerのみに集中しているため、他のlibraryや既存プロジェクトとの統合が簡単である。</li>
+            <li>modern toolingやsupporting librariesとの併用でのSingle-Page Applicationsのpoweringに非常に適している。</li>
+            <li>インストールとコンパイルが完了したら、対象のhtmlファイルのコードのheadに以下のいずれかのコードを記述する。</li>
+            <pre>
+              <code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</code>
+            </pre>
+            <pre>
+              <code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2&quot;&gt;&lt;/script&gt;</code>
+            </pre>
+            <li>Declarative Rendering、Conditionals and Loops、Handling User Input、Composing with ComponentsなどについてのHTMLとCSSサンプルコードが公開されている。</li>
+        </ul>    
+    <h2>index.htmlのデザイン</h2>
+        <ul>
+            <li>gridのデザイン</li>
+            <ul>
+              <li>ContentsとAssignmentsのgridの設定を書き換えて、レイアウトを変更する。</li>
+              <pre>
+                <code> &lt;div class=&quot;uk-child-width-1-3@s uk-child-width-1-3@m uk-grid-small&quot; uk-grid&gt;</code>
+              </pre>
+              <li>"...-1-3..."は縦に3分割することを指定していることが分かる。</li>
+              <img data-src="./img/ui1.png" width="70%" uk-img>
+            </ul>
+            <li>cardのデザイン</li>
+            <ul>
+              <li>ContentsとAssignmentsのcardを書き換えて、カラーを変更する。</li>
+              <pre>
+                <code>&lt;div class=&quot;uk-card uk-card-hover uk-card-primary uk-card-body&quot;&gt;</code>
+              </pre>
+              <pre>
+                <code>&lt;div class=&quot;uk-card uk-card-hover uk-card-secondary uk-card-body&quot;&gt;</code>
+              </pre>
+              <img data-src="./img/ui2.png" width="70%" uk-img>
+              <li>レスポンシブデザインであることも確認できる。</li>
+              <img data-src="./img/ui3.png" width="70%" uk-img>
+              <img data-src="./img/ui4.png" width="70%" uk-img>
+              <li>UIkitにおいてはcardのカラーは"Default"(白)、"Primary"(青)、"Secondary"(黒)から指定できる。</li>
+            </ul>
+        </ul>
+
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 06</title>
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+    body {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px){
+      body {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    </style>
+    <script type="text/javascript">
+    
+        $(function(){
+          $("#Header").load("../nav2.html");
+       });
+     
+     </script>
+  </head>
+  <body>
+    <header>
+        <div id="Header"></div>
+    </header>
+    <h1>第6回課題</h1>
+    <p>マルチメディアコンテンツをWebで配信する</p>
+    <h2>multimedia.htmlのファイル作成</h2>
+        <ul>
+            <li>"New file"で"muttimedia.html"を新規作成する。</li>
+            <img data-src="./img/multimedia_html.png" width="70%" uk-img>
+            <li>DOCTYPE宣言をして、headタグをコピペする。titleを"マルチメディアコンテンツ"に変更する。</li>
+            <li>nav.htmlにmultimedia.htmlへのリンクを加え、ヘッダーに表示できるようにする。</li>
+            <pre>
+            <code>            &lt;ul class=&quot;uk-navbar-nav&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;./index.html&quot;&gt;HOME&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;uk-active&quot;&gt;&lt;a href=&quot;./aboutme.html&quot;&gt;AboutMe&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;uk-active&quot;&gt;&lt;a href=&quot;./multimadia.html&quot;&gt;Multimedia&lt;/a&gt;&lt;/li&gt;</code>
+            </pre>
+        </ul>
+    <h2>埋め込みタグを利用した動画の貼り付け</h2>
+        <ul>
+            <li>動画サイトの"共有"ボタンから"埋め込む"を選択して埋め込みタグをコピーする。</li>
+            <img data-src="./img/youtube1.png" width="70%" uk-img>
+            <img data-src="./img/youtube2.png" width="70%" uk-img>
+            <img data-src="./img/youtube3.png" width="70%" uk-img>
+            <li>multimedia.htmlのbodyにペーストする。</li>
+            <li>動画の次の行に紹介文を添える。</li>
+        </ul>
+    <h2>撮影した写真の貼り付け</h2>
+        <ul>
+            <li>ドライブにアップロードされているスマホの画像をPCにダウンロードし、右クリック→"編集"でペイントを開きトリミングとサイズダウンをする。</li>
+            <img data-src="./img/sizedown.png" width="70%" uk-img>
+            <li>サイズ変更でピクセル数を調節する。</li>
+            <img data-src="./img/sizedown2.png" width="70%" uk-img>
+            <li>publicフォルダ内のimgフォルダにコピーする。※最初は誤ってassignmentsフォルダ内のimgフォルダにコピーしてしまったため、webで表示できていなかった。相対パスのルールと、エディターのフォルダの構成を見直して修正した。</li>
+            <li>imgタグを利用してmultimedia.htmlに画像を貼り付けする。</li>
+            <pre>
+            <code>&lt;img data-src=&quot;./img/gunpla2020.jpg&quot; width=&quot;70%&quot; uk-img&gt;</code>
+            </pre>
+            <li>画像の次の行に紹介文を添える。</li>
+        </ul>
+   </body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 11</title>
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+    body {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px){
+      body {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    </style>
+    <script type="text/javascript">
+    
+        $(function(){
+          $("#Header").load("../nav2.html");
+       });
+     
+     </script>
+  </head>
+  <body>
+    <header>
+        <div id="Header"></div>
+    </header>
+    <h1>第11回課題</h1>
+    <p>Cromeの開発ツールを使ってWebサイトを解析する。</p>
+    <p>今回解析するのはWILDBEACHというバーベキュー施設のホームページ。今年7月に近所に新店舗がオープンするということで調べてみると、おしゃれなWebデザインだったので今回解析することにした。</p>
+    <a href="https://wildbeach.jp/">ワイルドビーチのホームページ</a>
+    <h2>デベロッパーツールを開く</h2>
+      <ul>
+        <li>ツールバー右上端の設定をクリック、「その他のツール」にマウスオーバーし「デベロッパーツール」を選択する。</li>
+        <li>またはショートカットキー[Shift]+[Ctrl]+[I]で開く</li>
+        <img data-src="./img/chrome1.png" width="70%" uk-img>
+        <li>以下のようにデベロッパーツールが展開されることを確認する。</li>
+        <img data-src="./img/chrome2.png" width="70%" uk-img>
+      </ul>
+    <h2>Elementsを使ったレイアウト構成の解析</h2>
+      <ul>
+        <li>Elementsタグを開き、まずはHTMLから見ていく。</li>
+          <ul>
+            <li>headタグ</li>
+              <ul>
+                <pre>
+                  <code>&lt;head&gt;
+                    &lt;title&gt;ワイルドビーチ・リゾート アーバン ”グランピング” ブランド - WILD BEACH RESORT -&lt;/title&gt;
+                    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+                    &lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt;
+                    &lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-cache&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0 user-scalable=no&quot;&gt;
+                    &lt;meta name=&quot;description&quot; content=&quot;もっと「自由に」「優雅に」「スタイリッシュに」全国に広がるアーバン“グランピング”ブランド。シグネチャーコンテンツ白いビーチとフレンチバーベキューなど、選べるデザインとプランで、ラグジュアリーな「スマート“ヴァカンス”キャンプ」の世界へ。&quot;&gt;
+                    &lt;meta name=&quot;keywords&quot; content=&quot;ワイルドビーチ,WILD BEACH,木更津,新宿,キャンピング,ルミネ,LUMINEアウトドア,BARBECUE,bbq,バーベキュー,グランピング,CAMP,キャンプ,手ぶら,リゾートマジック,glamping,ワイルドマジック,ジャグジー,ジェットバス,コタツ,冬キャンプ,千葉,スマートキャンプ&quot;&gt;
+                    &lt;link rel=&quot;canonical&quot; href=&quot;//wildbeach.jp/&quot;&gt;
+                    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+                    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0 user-scalable=no&quot;&gt;
+                    &lt;link href=&quot;/top3/css/style.css?=ver5&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+                    &lt;meta name=&quot;”keywords”&quot; content=&quot;”ワイルドマジック,WILDMAGIC,wildmagic,ワイルド,WILD,wild,THEBEACH,thebeach,THEBEACHBBQ,thebeachbbq,WILDPARK,wildpark”&quot;&gt;
+                  
+                    &lt;!--[if lt IE 9]&gt;
+                    &lt;script src=&quot;//html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;
+                    &lt;![endif]--&gt;
+                    &lt;link rel=&quot;image_src&quot; href=&quot;//wildbeach.jp/top/img/meta/android-chrome-192x192.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;57x57&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-57x57.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;60x60&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-60x60.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-72x72.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;76x76&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-76x76.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-114x114.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;120x120&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-120x120.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;144x144&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-144x144.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;152x152&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-152x152.png&quot;&gt;
+                    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;//wildbeach.jp/top/img/meta/apple-touch-icon-180x180.png&quot;&gt;
+                    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;//wildbeach.jp/top/img/meta/favicon-32x32.png&quot; sizes=&quot;32x32&quot;&gt;
+                    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;//wildbeach.jp/top/img/meta/favicon-96x96.png&quot; sizes=&quot;96x96&quot;&gt;
+                    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;//wildbeach.jp/top/img/meta/favicon-16x16.png&quot; sizes=&quot;16x16&quot;&gt;
+                    &lt;script async=&quot;&quot; src=&quot;https://www.google-analytics.com/analytics.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;//wildbeach.jp/top/js/lib/modernizr.js&quot;&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                    (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
+                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
+                    ga(&#39;create&#39;, &#39;UA-77015613-1&#39;, &#39;auto&#39;);
+                    ga(&#39;send&#39;, &#39;pageview&#39;);
+                    &lt;/script&gt;
+                  &lt;/head&gt;
+                  </code>
+                </pre>
+              <li>Webサイトのメタキーワードなどが設定されているほか、viewportを利用した端末やウィンドウの大きさの変化への対応、scriptの設定などが確認できる。</li>
+              </ul>
+            <li>bodyタグ</li>
+              <ul>
+                <pre>
+                  <code>&lt;body class=&quot;home page-home seabg&quot;&gt;
+
+                    &lt;div id=&quot;wrapper&quot;&gt;
+                      &lt;section&gt;
+                        &lt;div id=&quot;main&quot;&gt;
+                          
+                          &lt;div class=&quot;bg&quot; id=&quot;bg-shinjuku&quot;&gt;&lt;/div&gt;
+                          &lt;div class=&quot;bg&quot; id=&quot;bg-kisarazu&quot;&gt;&lt;/div&gt;
+                          &lt;div class=&quot;bg&quot; id=&quot;bg-sendai&quot;&gt;&lt;/div&gt;
+                          
+                          &lt;div class=&quot;logo-block&quot;&gt;
+                            &lt;div class=&quot;brand-logo&quot;&gt;&lt;img src=&quot;/top3/img/logo44.png&quot; alt=&quot;WILDBEACH Feel the vibes&quot;&gt;&lt;/div&gt;
+                            &lt;!--&lt;h1&gt;&lt;a href=&quot;/kingdomkawasaki/&quot; style=&quot;color:#fff;&quot;&gt;&lt;small&gt;fishing &amp; bar-be-cue&lt;/small&gt;&lt;br&gt;WILD KINGDOM KAWASAKI&lt;br&gt;7/20 NEW OPEN!&lt;/a&gt;&lt;/h1&gt;--&gt;
+                          &lt;/div&gt;
+                          
+                          &lt;div class=&quot;shop-logos&quot;&gt;
+                            &lt;div class=&quot;shop-link&quot;&gt;
+                              &lt;div class=&quot;shop-top-photo&quot;&gt;&lt;h1&gt;WILDBEACH&lt;/h1&gt;&lt;/div&gt;
+                              &lt;ul&gt;
+                                &lt;li&gt;&lt;a href=&quot;/kisarazu/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;KISARAZU&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://wildbeach.jp//zama/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;ZAMA&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;/shinjuku/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;SHINJUKU&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;/sendai/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;SENDAI&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;shop-link&quot;&gt;
+                              &lt;div class=&quot;shop-top-photo&quot;&gt;&lt;h1&gt;WILDKINGDOM&lt;/h1&gt;&lt;/div&gt;
+                              &lt;ul&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://tabelog.com/tokyo/A1313/A131307/13243719/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;TOYOSU&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;!--&lt;li&gt;&lt;a href=&quot;/kingdomkawasaki/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;KAWASAKI&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;--&gt;
+                                &lt;li&gt;&lt;a href=&quot;/kisarazu/zone/wild-kingdom/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;KISARAZU&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://wildbeach.jp/zama/&quot; class=&quot;area threecolumn area-kisarazu-btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;h2&gt;ZAMA&lt;/h2&gt;&lt;/a&gt;&lt;/li&gt;
+                    
+                              &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;shop-link&quot;&gt;
+                              &lt;div class=&quot;shop-top-photo&quot;&gt;&lt;h1&gt;WILDCARD&lt;/h1&gt;&lt;/div&gt;
+                              
+                            &lt;/div&gt;
+                    
+                            &lt;div class=&quot;shop-link&quot;&gt;
+                                &lt;!-- &lt;li class=&quot;instagram-logo&quot;&gt;&lt;a href=&quot;./instagram.php&quot; class=&quot;area threecolumn area-instagram-btn&quot;&gt;&lt;img src=&quot;/top3/img/instagram.svg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/li&gt; --&gt;
+                    &lt;!-- 						&lt;li class=&quot;instagram-logo&quot;&gt;&lt;a href=&quot;./instagram.php&quot; class=&quot;area threecolumn area-instagram-btn&quot;&gt;&lt;img src=&quot;/top3/img/instagram.svg&quot; alt=&quot;image&quot;&gt;&lt;/a&gt;&lt;/li&gt; --&gt;
+                                &lt;ul&gt;
+                                  &lt;li&gt;&lt;a href=&quot;./instagram.php&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;img src=&quot;assets/img/kisarazu/instagram.png&quot; alt=&quot;instagram&quot; class=&quot;sns_btn&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href=&quot;https://vt.tiktok.com/ZSJYXnUhn/&quot; class=&quot;sns_btn&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;img src=&quot;assets/img/kisarazu/tiktok_bg.png&quot; alt=&quot;tiktok&quot; class=&quot;sns_btn&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/results?search_query=%23%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%83%93%E3%83%BC%E3%83%81&quot; data-bg=&quot;bg-kisarazu&quot;&gt;&lt;img src=&quot;assets/img/kisarazu/youtube_bg.png&quot; alt=&quot;youtube&quot; class=&quot;sns_btn&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          
+                          &lt;div class=&quot;footer&quot;&gt;
+                            &lt;a href=&quot;http://re-cr.com/&quot; class=&quot;rec&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/top3/img/recreations-logo.png&quot; alt=&quot;DESIGN / BRANDING RECREATIONS&quot;&gt;&lt;/a&gt;
+                            &lt;p&gt;Copyright © 2017 RECREATIONS All rights reserved&lt;/p&gt;
+                          &lt;/div&gt;
+                            
+                        &lt;/div&gt;&lt;!-- #main --&gt;
+                      &lt;/section&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                    $(function(){
+                      setTimeout(function(){
+                        $(&#39;header&#39;).removeClass(&#39;fly&#39;);
+                        $(&#39;header&#39;).addClass(&#39;offfly&#39;);
+                      }, 600);
+                      $(&#39;.area&#39;).on(&#39;mouseenter&#39;, function (e) {
+                        var bg = $(this).attr(&#39;data-bg&#39;);
+                        $(&#39;.bg&#39;).removeClass(&#39;active&#39;);
+                        $(&#39;#&#39;+bg+&#39;&#39;).addClass(&#39;active&#39;);
+                        e.preventDefault();
+                      });
+                      $(&#39;.area&#39;).on(&#39;mouseleave&#39;, function (e) {
+                        $(&#39;.bg&#39;).removeClass(&#39;active&#39;);
+                        e.preventDefault();
+                      });
+                    });
+                    
+                    $(window).on(&#39;load resize&#39;, function(){
+                      var $logos = $(&#39;.logos&#39;);
+                      wH = $(window).height();
+                      $logos.height(wH - 50);
+                    });
+                    
+                    &lt;/script&gt;
+                    
+                    
+                    
+                    &lt;/body&gt;</code>
+                </pre>
+                <li>divタグの"wrapper"IDで大枠が構成されており、その中の"main"IDにおいて各要素にclass属性が設定されている。</li>
+                <li>例えば、店舗のリンクの一覧は"shop-logos"というclass属性になっていて、その中にカテゴリー別の"shop-link"class、さらにその中に代替テキストの"shop-top-photo"classとリンクのaタグが格納されている。</li>
+                <img data-src="./img/div1.png" width="70%" uk-img>
+                <img data-src="./img/div2.png" width="70%" uk-img>
+              </ul>
+          </ul>
+        <li>次にスタイルシートを見ていく。</li>
+        <li>.seabgというclass属性では、背景の設定が施されており、左側のチェックマークを解除するとそれぞれのはたらきを確認できる。</li>
+          <ul>
+            <li>背景画像の設定の解除</li>
+            <img data-src="./img/elements1.png" width="70%" uk-img>
+            <li>画像の位置の設定の解除</li>
+            <img data-src="./img/elements2.png" width="70%" uk-img>
+            <li>画像サイズの設定の解除</li>
+            <img data-src="./img/elements3.png" width="70%" uk-img>
+          </ul>
+        <li>body要素の直接指定では、以下のようなコードが確認できた。</li>
+          <pre>
+            <code>body {
+              color: #494949;
+              line-height: 1.7;
+              font-family: 'Montserrat','GothamNarrow',"YuGothic", "Yu Gothic","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+              -webkit-font-smoothing: antialiased;
+              -webkit-tap-highlight-color: rgba(0,0,0,0);
+          }</code>
+          </pre>
+          <ul>
+            <li>.seabgと同様にチェックボックスを解除してみたが、違いが微妙なものだった。</li>
+            <li>10種類ものフォントが使用されていることがわかった。</li>
+            <li>他の要素、class属性でも同様に、コードに横線が掛けられているものは解除しても変化がなかった。</li>
+          </ul>
+        <li>paddingのコードにマウスオーバーすると、各要素の周りとの間隔が緑色の網掛けで表示された。</li>
+        <img data-src="./img/elements4.png" width="70%" uk-img>
+        <li>Computedタグでは、ページのmargin、border、paddingの範囲を確認することができるが、このページでは使用されてないため中心しか表示がなかった。</li>
+        <img data-src="./img/elements5.png" width="70%" uk-img>
+        <li>LayoutのFlexbox Overlaysで各要素にマウスオーバーすると、それぞれの大枠が網掛けで表示される。</li>
+        <li>タイトルロゴの要素は"div.logo-block"、その他店舗やSNSへのリンクは"ul"タグで構成している。</li>
+        <img data-src="./img/elements6.png" width="70%" uk-img>
+        <img data-src="./img/elements7.png" width="70%" uk-img>
+        <img data-src="./img/elements8.png" width="70%" uk-img>
+        <img data-src="./img/elements9.png" width="70%" uk-img>
+      </ul>
+    <h2>Consoleからエラーの有無の確認</h2>
+      <ul>
+        <li>Elementタグの隣のConsoleタグを開く。エラーは確認されなかった。</li>
+        <img data-src="./img/console.png" width="70%" uk-img>
+      </ul>
+    <h2>SourceからWebページに使用されている各種ファイルの確認</h2>
+      <ul>
+        <img data-src="./img/sou1.png" width="70%" uk-img>
+        <li>WebページのHTMLやCSSのコード、使用している画像ファイルやフォントが各フォルダに格納されている。</li>
+        <li>また、Java Script libraryとしてModernizr、jQuery、Google Analyticsが使用されていることがわかる。</li>
+        <img data-src="./img/sou2.png" width="70%" uk-img>
+        <img data-src="./img/sou3.png" width="70%" uk-img>
+        <img data-src="./img/sou4.png" width="70%" uk-img>
+      </ul>
+    <h2>Performaceを使ってのWebサイトのパフォーマンスの確認</h2>
+      <ul>
+        <li>Performanceタブを開き、●のボタンをクリックするか[Ctrl]+[E]のショートカットキーで測定を開始する。</li>
+        <img data-src="./img/perf2.png" width="70%" uk-img>
+        <li>計測結果の上段は時系列で表示され、赤い線の時点でページの表示が完了したことを意味している。</li>
+        <li>上段の赤い線を左端までドラッグすると、測定開始から表示完了までの時間を下段で確認できる。</li>
+        <li>このページの表示にかかった時間は2099msであることがわかる。</li>
+        <li>その内訳は、Loadingが7ms、Scriptingが46ms、Renderingが8ms、Paintingが1ms、Systemが50ms、Idleが1987msとなっている。</li>
+      </ul>
+    <h2>Toggle Device Toolbarを使ったWebサイトのレスポンシブ対応状況の確認</h2>
+      <ul>
+        <li>Elementsの左隣の端末のイラストのマークをクリックし、Toggle Device Toolbarを開く<li>
+        <li>ツールバーの左端のプルダウンメニューから、表示させる端末モデルを選択する。</li>
+        <li>iPnone X</li>
+        <img data-src="./img/tog1.png" width="70%" uk-img>
+        <li>iPad</li>
+        <img data-src="./img/tog2.png" width="70%" uk-img>
+        <li>iPnone X 横画面</li>
+        <img data-src="./img/tog3.png" width="70%" uk-img>
+      </ul>
+    <h2>解析結果についての考察</h2>
+    <li>Webページの外観は非常にシンプルで、それに伴いHTMLのコードも簡潔であったが、Java Script Libraryが3種類も使用されていた。特にGoogle Analyticsはユーザーの分析を行っているので、WILDBEACHはこのWebサイトを閲覧したユーザーのデータをマーケティングの参考にしていると考えられる。</li>
+    <li>HTMLのコードでviewportの設定が行われており、Toggle Device Toolbarでも正常な動作が確認できた。おしゃれなデザインをどの端末でも崩さず表示するために、レスポンシブデザインが採用されていることがわかる。</li>
+    <li>シンプルなデザインだけに、ページの表示完了までの時間も速かった。背景画像は3264x2448のサイズで1.6MBに抑えており、綺麗な写真の処理の省エネ化に貢献していると考えられる。</li>
+    <li>ちなみに、動作が速いことで有名な阿部寛さんのホームページは116msで表示が完了していた。</li>
+    <img data-src="./img/abe.png" width="70%" uk-img>
+  </body>
+</html>

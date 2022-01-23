@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 04 はじめてのHTML</title>
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+    body {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px){
+      body {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    </style>
+    <script type="text/javascript">
+    
+        $(function(){
+          $("#Header").load("../nav2.html");
+       });
+     
+     </script>
+  </head>
+  <body>
+    <header>
+        <div id="Header"></div>
+    </header>
+    <h1>第４回課題</h1>
+    <p>ドキュメンテーションのテンプレートHTML</p>
+    <h2>aboutme.htmlの作成</h2>
+      <ul>
+        <li>"New file"をクリックして、publicフォルダ内に、"aboutme.html"ファイルを作る。</li>
+        <img data-src="./img/newfile.png" width="50%" uk-img>
+        <li>最初にDOCTYPE宣言をする。※補完機能を利用して効率的に書けるように慣れる。</li>
+        <pre>
+        <code>&lt;!DOCTYPE html&gt;</code>
+        </pre>
+        <li>index.html内のheadの内容をaboutme.htmlにコピペする。</li>
+        <pre>
+        <code> &lt;head&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+            &lt;title&gt;Welcome to Ibuki Shibayama&#39;s Website&lt;/title&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/uikit.min.css&quot;&gt;
+            &lt;script src=&quot;./js/uikit.min.js&quot;&gt;&lt;/script&gt;
+            &lt;script src=&quot;./js/uikit-icons.min.js&quot;&gt;&lt;/script&gt;
+            &lt;/script&gt;
+            &lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;&gt;&lt;/script&gt;
+            &lt;script type=&quot;text/javascript&quot;&gt;
+            
+              $(function(){
+                $(&quot;#Header&quot;).load(&quot;./nav.html&quot;);
+              });
+        
+            &lt;/script&gt;
+        &lt;/head&gt;</code>
+        </pre>
+        <li>bodyタグの中に見出しのhタグやパラグラフのpタグを作り、自己紹介のテキストを挿入する。※リストタグやリンクを貼ることができるaタグを上手く利用する。</li>
+        <pre>
+        <code>  &lt;body&gt;
+            &lt;/header&gt;
+            &lt;h1&gt;自己紹介&lt;/h1&gt;
+            &lt;p&gt;柴山息吹&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;所属&lt;/li&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;青山学院大学&lt;/li&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://www.aoyama.ac.jp/&quot;&gt;青山学院大学ホームページ&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;li&gt;地球社会共生学部&lt;/li&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://www.gsc.aoyama.ac.jp/&quot;&gt;地球社会共生学部ホームページ&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;li&gt;古橋研究室&lt;/li&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href=&quot;http://furuhashilab.com/&quot;&gt;古橋研究室ホームページ&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://github.com/furuhashilab&quot;&gt;Furuhashi Labs Github&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;https://goo.gl/maps/hTbB1j2rmz65THE6A&quot;&gt;Google map&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                    &lt;/ul&gt;
+                    
+    
+                &lt;li&gt;出身：神奈川県相模原市&lt;/li&gt;
+                &lt;li&gt;趣味&lt;/li&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;アニメ・映画&lt;/li&gt;
+                        &lt;li&gt;プラモデル&lt;/li&gt;
+                        &lt;li&gt;ラーメン&lt;/li&gt;
+                    &lt;/ul&gt;
+            &lt;/ul&gt;
+        &lt;/body&gt;</code>
+        </pre>
+        <li>"New Folder"をクリックして、publicフォルダ内に、"img"フォルダーを作る。</li>
+        <img data-src="./img/newfolder.jpg" width="50%" uk-img>
+        <li>挿入する写真を選択し、ファイル名が半角英数字スペース無しであることを確認する。そして、ファイルを右クリックして"編集"を開き、"サイズ変更"でピクセル数を調整し、200KB以下までサイズダウンさせる。</li>
+        <img data-src="./img/pictureedit.png" width="50%" uk-img>
+        <li>サイズダウンした写真はimgフォルダにコピペする。</li>
+        <li>imgタグを使って写真ファイルを挿入する。属性はdata-srcで、属性値には相対パスを使ってファイル名を入力する。</li>
+        <pre>
+        <code>        &lt;img data-src=&quot;./img/okinawa3small.jpg&quot; width=&quot;50%&quot; uk-img&gt;</code>
+        </pre>
+        
+      </ul>
+    <h2>HOMEからABOUTMEへアクセスできるようにする</h2>
+      <ul>
+        <li>nav.htmlのAboutMeのaタグのファイル名を./aboutme.htmlにする。</li>
+        <pre>
+        <code>           &lt;li class=&quot;uk-active&quot;&gt;&lt;a href=&quot;./aboutme.html&quot;&gt;AboutMe&lt;/a&gt;&lt;/li&gt;</code> 
+        </pre>
+      </ul>
+    <!--- 
+      - このHTMLファイルをコピーして使う。-
+      - 課題のHTMLは全てAssignmentsフォルダに入れる
+      - 画像はimgフォルダに入れて、imgタグを使い相対パスで記載する
+      - 必ず index.htmlにリンクを貼ること
+    -->
+
+  </body>
+</html>
+

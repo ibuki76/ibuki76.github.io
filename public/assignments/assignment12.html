@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 12</title>
+    <link rel="stylesheet" href="../css/uikit.min.css">
+    <script src="../js/uikit.min.js"></script>
+    <script src="../js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+    body {
+      width: 768px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px){
+      body {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    </style>
+    <script type="text/javascript">
+    
+        $(function(){
+          $("#Header").load("../nav2.html");
+       });
+     
+     </script>
+  </head>
+  <body>
+    <header>
+        <div id="Header"></div>
+    </header>
+    <h1>第12回課題</h1>
+    <p>Officeソフト以外の文書処理、統計処理、プレゼンテーションの各ソフトウェアを使ってみる。</p>
+    <h3>文書処理：Google document</h3>
+      <ul>
+        <li>Google documentはブラウザ上で利用することができる。Chromeであればアプリメニューから選択してすぐに利用できる。</li>
+        <img data-src="./img/doc1.png" width="70%" uk-img>
+        <li>ドキュメントを新しく作成する場合は、+マークの"空白"の他、履歴書やパンフレットなどのテンプレートを選択することができる。</li>
+        <li>編集ページでは、ツールバーにマウスオーバーするとプルダウンで各種操作を選択できる。その下のメニューバーは固定型で、隠すことも可能。</li>
+        <img data-src="./img/doc2.png" width="70%" uk-img>
+        <img data-src="./img/doc3.png" width="70%" uk-img>
+        <li>ドライブ上に自動保存されていることが確認できる。</li>
+        <img data-src="./img/doc4.png" width="70%" uk-img>
+        <li>メニューバーの"B"アイコンの"太字"を選択、または[Ctrl]+Bでテキストをボールドにできる。</li>
+        <li>箇条書きもメニューバーから選択できる。</li>
+        <img data-src="./img/doc5.png" width="70%" uk-img>
+        <li>メニューバーの"スタイル"では見出しやサブタイトルなどに適したスタイルを各所に設定できる。</li>
+        <img data-src="./img/doc6.png" width="70%" uk-img>
+        <img data-src="./img/doc7.png" width="70%" uk-img>
+        <li>画像の挿入はGoogle driveから直接画像を選択することができる。</li>
+        <img data-src="./img/doc8.png" width="70%" uk-img>
+        <li>共同編集を想定し、各所にコメントを残す機能も備わっている。</li>
+        <img data-src="./img/doc9.png" width="70%" uk-img>
+        <img data-src="./img/doc10.png" width="70%" uk-img>
+        <li>共有設定では、相手の権限や共有可能な範囲を設定することができる。</li>
+        <img data-src="./img/doc11.png" width="70%" uk-img>
+      </ul>
+    <h3>統計処理：iOS Numbers</h3>
+      <ul>
+        <li>NumbersはiPhoneやiPadのiOSやMacOSに付属している統計処理のアプリケーションである。今回はiPadで操作を試してみる。</li>
+        <img data-src="./img/num1.jpg" width="70%" uk-img>
+        <li>新規作成のテンプレート種類豊富で、デザイン性が重視されているものを簡単に利用することができる。</li>
+        <img data-src="./img/num2.jpg" width="70%" uk-img>
+        <li>デフォルトの画面は以下の通り。右上のメニューバーでは挿入や書式設定を操作できる。右下にはキーボードボタンとセルアクションボタンが設置されている。</li>
+        <img data-src="./img/num3.jpg" width="70%" uk-img>
+        <li>セルを選択した状態でセルアクションボタンをクリックすると、日付や数式などのデータの挿入と基本的な計算を選択できる。</li>
+        <img data-src="./img/num4.jpg" width="70%" uk-img>
+        <li>株価では、銘柄と各種データを選択してセルに挿入することができる。Nikkei 225の取引値はYahoo!financeがソースであることがわかる。</li>
+        <img data-src="./img/num5.jpg" width="70%" uk-img>
+        <img data-src="./img/num6.jpg" width="70%" uk-img>
+        <li>次に複数のセルに適当な数値を手入力し、それらを同時選択した上でセルアクションの計算機能を使ってみる。</li>
+        <img data-src="./img/num7.jpg" width="70%" uk-img>
+        <ul>
+          <li>合計値</li>
+          <img data-src="./img/num8.jpg" width="70%" uk-img>
+          <li>平均値</li>
+          <img data-src="./img/num9.jpg" width="70%" uk-img>
+        </ul>
+        <li>右上の詳細ボタンからはエクスポート操作が選択できる。ファイル形式はPDF、Excel、CSV、TSV、Numbersテンプレート。</li>
+        <img data-src="./img/num10.jpg" width="70%" uk-img>
+        <img data-src="./img/num11.jpg" width="70%" uk-img>  
+        <li>右上の挿入ボタンからはテーブルやグラフの作成を選択できる。</li>
+        <img data-src="./img/num12.jpg" width="70%" uk-img>
+        <img data-src="./img/num16.jpg" width="70%" uk-img>
+        <li>また、方程式の挿入を選ぶと、キーボード入力した数式をオブジェクトとして挿入することができる。</li>
+        <img data-src="./img/num13.jpg" width="70%" uk-img>
+        <img data-src="./img/num14.jpg" width="70%" uk-img>
+        <img data-src="./img/num15.jpg" width="70%" uk-img>
+      </ul>
+    <h3>プレゼンテーション：Canva</h3>
+      <ul>
+        <li>Canvaはブラウザ上でスライド、ポスター、フライヤー、動画など様々なデザインを編集できるサービスである。無料で利用可能で、一部課金要素あり。</li>
+        <li><a href="https://www.canva.com/">Canvaホーム</a></li>
+        <img data-src="./img/can1.png" width="70%" uk-img>
+        <li>プレゼンテーションで新規作成を選択すると、デフォルトの編集画面が出てくる。上部に編集・設定のメニューバー、左側には素材の選択画面、下部にスライド一覧が表示される。</li>
+        <img data-src="./img/can2.png" width="70%" uk-img>
+        <li>Canvaはテンプレート、素材共にバラエティ豊かでかつデザイン性が高い。テンプレートと素材を上手く組み合わせることでおしゃれなスライドを効率的に作成することができる。</li>
+        <img data-src="./img/can3.png" width="70%" uk-img>
+        <img data-src="./img/can5.png" width="70%" uk-img>
+        <img data-src="./img/can6.png" width="70%" uk-img>
+        <li>テキストオブジェクトを選択した状態でフォントを設定することができる。</li>
+        <img data-src="./img/can4.png" width="70%" uk-img>
+        <li>他のアプリと連携して、様々な情報を埋め込むことができる。今回はGoogle Mapをスライド上に埋め込んでみた。</li>
+        <img data-src="./img/can7.png" width="70%" uk-img>
+        <li>スライド上でマップを操作することも可能。</li>
+        <img data-src="./img/can8.png" width="70%" uk-img>
+        <li>スライド上にグラフを載せることも出来る。</li>
+        <img data-src="./img/can9.png" width="70%" uk-img>
+        <li>編集ボタンを押すと、グラフの設定をテーブルから操作することができる。スプレッドシートのファイルからデータをペーストすることも可能。</li>
+        <img data-src="./img/can10.png" width="70%" uk-img>
+        <li>スライドのアニメーションも多様なものから選択できる。</li>
+        <img data-src="./img/can11.png" width="70%" uk-img>
+        <li>他のユーザーとリンクを共有することでリアルタイムで共同編集することも出来る。</li>
+        <li>ダウンロードは、PNG、JPG、PDF、SVG、MP4、GIFから選択できる。</li>
+        <img data-src="./img/can12.png" width="70%" uk-img>
+      </ul>
+
+  </body>
+</html>

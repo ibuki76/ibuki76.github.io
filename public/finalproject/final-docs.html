@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Documantation</title>
+        <link rel="stylesheet" href="../css/uikit.min.css" />
+        <script src="../js/uikit.min.js"></script>
+        <script src="../js/uikit-icons.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body class="uk-background-muted">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="./index.html">Home</a></li>
+                    <li><a href="./aboutme.html">AboutMe</a></li>
+                    <li>
+                        <a href="">Works</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="./3ddesign.html">3D Design</a></li>
+                                <li><a href="./works/movies.html">Movies</a></li>
+                                <li><a href="./works/gis.html">GIS Study</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Hobby</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="./gunpla.html">Gunpla</a></li>
+                            </ul>
+                        </div> 
+                    </li>
+                    <li><a href="./final-docs.html">Documentation</a></li>
+                </ul>
+            </div>
+        </nav>
+      <h1>ファイナルプロジェクトのドキュメンテーション</h1>
+      <ul>
+       <h2>全体の構成を考える。</h2>
+        <ul>
+            <li>ホームページは自分のポートフォリオとなるように制作する。自己分析や就職活動にも活用していけるように、学校で取り組んでいることや日常生活の様子が伝わるようにする。</li>
+            <li>フレームワークのUIkitの公式リファレンスを見てみたところ、試してみたいものが多かったので、自作のスタイルシートも使用しつつUIkitをメインに使う。</li>
+            <li>ホームのindex.htmlは、このWebサイトがポートフォリオであること、見る人を惹きつけるようなインパクトのあるデザインにする。</li>
+            <li>自己紹介のaboutme.htmlは、出身や今取り組んでいることなどを簡潔に記述する。関連サイトのプロフィールページへのリンクや位置情報を挿入する。</li>
+            <li>授業やゼミでの取り組みをWorksでまとめ、情報形態別にページを作る。</li>
+             <ul>
+                 <li>gis.htmlで空間情報の授業で取り扱った地図データを埋め込む。</li>
+                 <li>movies.htmlでゼミ活動に関連して制作したYouTube動画を埋め込む。</li>
+                 <li>3ddesign.htmlで授業課題として制作したVR空間を埋め込む。</li>
+             </ul>
+            <li>日常生活の様子を伝えるために趣味をHobbyでまとめ、それぞれページを作る。</li>
+             <ul>
+                 <li>gunpla.htmlで制作したプラモデルの画像とディスクリプションを載せる。</li>
+                 <li>ramen.htmlラーメンの写真と言ったことのあるラーメン屋の位置情報をまとめたWebマップを埋め込む。※時間が足りず、課題提出期限までの作業は断念した。</li>
+             </ul>
+            <li>final-docs.htmlにこのホームページ制作のドキュメンテーションを記述し、index.htmlにリンクを貼る。</li>
+        </ul>
+       <h2>index.html</h2>
+        <ul>
+　　　　　<li>ナビゲーションバーを作る。</li>
+            <ul>
+                <li>uk-navberを使ってページトップに固定型のナビゲーションバーを作った。</li>
+                <li>WorksとHobbyのタグはマウスオーバーするとドロップダウンで詳細のページへのリンクが出てくるようにした。</li>
+                <pre>
+                    <code>    &lt;nav class=&quot;uk-navbar-container&quot; uk-navbar&gt;
+                        &lt;div class=&quot;uk-navbar-left&quot;&gt;
+                            &lt;ul class=&quot;uk-navbar-nav&quot;&gt;
+                                &lt;li class=&quot;uk-active&quot;&gt;&lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;./aboutme.html&quot;&gt;AboutMe&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;&quot;&gt;Works&lt;/a&gt;
+                                    &lt;div class=&quot;uk-navbar-dropdown&quot;&gt;
+                                        &lt;ul class=&quot;uk-nav uk-navbar-dropdown-nav&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;./3ddesign.html&quot;&gt;3D Design&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;./works/movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href=&quot;./works/gis.html&quot;&gt;GIS Study&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;&quot;&gt;Hobby&lt;/a&gt;
+                                    &lt;div class=&quot;uk-navbar-dropdown&quot;&gt;
+                                        &lt;ul class=&quot;uk-nav uk-navbar-dropdown-nav&quot;&gt;
+                                            &lt;li&gt;&lt;a href=&quot;./gunpla.html&quot;&gt;Gunpla&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt; 
+                                &lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;./final-docs.html&quot;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/nav&gt;</code>
+                </pre>
+            </ul>
+        　<li>スライドショーを作る。</li>
+            <ul>
+                <li>uk-slideshowを使ってホームページのタイトルの背景のサイズでスライドショーを作った。</li>
+                <li>タイトルのuk-overlayがスライドショーの上にうまく表示されないトラブルがあったが、overlayのタグをslideshowのタグの内部に含ませることで解決した。</li>
+                <pre>
+                    <code>&lt;div class=&quot;uk-position-relative uk-visible-toggle uk-light&quot; tabindex=&quot;-1&quot; uk-slideshow&gt;
+                        &lt;ul class=&quot;uk-slideshow-items&quot;&gt;
+                            &lt;li&gt;
+                                &lt;img data-src=&quot;./img/fpbg.jpg&quot; width=&quot;1800&quot; height=&quot;1200&quot; alt=&quot;&quot; uk-cover uk-img=&quot;target: !.uk-slideshow-items&quot;&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;img data-src=&quot;./img/nasa1.jpg&quot; width=&quot;1800&quot; height=&quot;1200&quot; alt=&quot;&quot; uk-cover uk-img=&quot;target: !.uk-slideshow-items&quot;&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;img data-src=&quot;./img/gundam.jpg&quot; width=&quot;1800&quot; height=&quot;1200&quot; alt=&quot;&quot; uk-cover uk-img=&quot;target: !.uk-slideshow-items&quot;&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a class=&quot;uk-position-center-left uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-previous uk-slideshow-item=&quot;previous&quot;&gt;&lt;/a&gt;
+                        &lt;a class=&quot;uk-position-center-right uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-next uk-slideshow-item=&quot;next&quot;&gt;&lt;/a&gt;
+                     &lt;div class=&quot;uk-overlay uk-position-top uk-text-muted&quot;&gt;
+                        &lt;h1&gt;Portfolio&lt;/h1&gt;
+                        &lt;h1&gt;| IBUKI SHIBAYAMA&lt;/h1&gt;
+                     &lt;/div&gt;
+                    &lt;/div&gt;</code>
+                </pre>
+            </ul>
+          <li>ディスクリプションを作る。</li>
+            <ul>
+                <li>uk-cardを使ってホームページの簡単な説明書きを設置した。</li>
+                <li>gridで見出し、本文、About Meへのリンクを分割し、見出しには自作のロゴマーク画像をアイコン風に設置した。</li>
+                <pre>
+                    <code>  &lt;div class=&quot;uk-card uk-card-default uk-width-1-2@m&quot;&gt;
+                        &lt;div class=&quot;uk-card-header&quot;&gt;
+                            &lt;div class=&quot;uk-grid-small uk-flex-middle&quot; uk-grid&gt;
+                                &lt;div class=&quot;uk-width-auto&quot;&gt;
+                                    &lt;img class=&quot;uk-border-circle&quot; width=&quot;40&quot; height=&quot;40&quot; src=&quot;./img/logomini.png&quot;&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;uk-width-expand&quot;&gt;
+                                    &lt;h3 class=&quot;uk-card-title uk-margin-remove-bottom&quot;&gt;My Portfolio&lt;/h3&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;uk-card-body&quot;&gt;
+                            &lt;p&gt;大学の授業や研究室の活動での課題や制作物、趣味をつめこんだホームページです。&lt;/p&gt;
+                            &lt;p&gt;「柴山息吹とは何者なのか」「何をしているのか」を伝えることを目的に制作しています。&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;uk-card-footer&quot;&gt;
+                            &lt;a href=&quot;./aboutme.html&quot; class=&quot;uk-button uk-button-text&quot;&gt;About Me&lt;/a&gt;
+                        &lt;/div&gt;
+                   &lt;/div&gt;</code>
+                </pre>
+            </ul>
+          <li>ハイライトを作る。</li>
+            <ul>
+                <li>slideshowを使って、Webサイト内のおすすめのコンテンツをピックアップした。</li>
+                <li>overlayの説明テキストをuk-transition-slideを使って動きが出るように設定し、それぞれのスライドをaタグで囲って対象のページにリンクできるようにした。</li>
+                <pre>
+                    <code>&lt;div class=&quot;uk-position-relative uk-visible-toggle uk-light&quot; tabindex=&quot;-1&quot; uk-slideshow=&quot;animation: fade&quot;&gt;
+                        &lt;ul class=&quot;uk-slideshow-items&quot;&gt;
+                           &lt;a href=&quot;./gunpla.html&quot;&gt;
+                            &lt;li&gt;
+                                &lt;img src=&quot;./img/gunplamini.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                                &lt;div class=&quot;uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium&quot;&gt;
+                                    &lt;h3 class=&quot;uk-margin-remove&quot;&gt;Hobby&lt;/h3&gt;
+                                    &lt;p class=&quot;uk-margin-remove&quot;&gt;趣味で制作しているプラモデルについて&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                           &lt;/a&gt;
+                           &lt;a href=&quot;./works/gis.html&quot;&gt;
+                            &lt;li&gt;
+                                &lt;img src=&quot;./img/map1.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                                &lt;div class=&quot;uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium&quot;&gt;
+                                    &lt;h3 class=&quot;uk-margin-remove&quot;&gt;GIS&lt;/h3&gt;
+                                    &lt;p class=&quot;uk-margin-remove&quot;&gt;空間情報に関する制作物について&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                           &lt;/a&gt;
+                           &lt;a href=&quot;./3ddesign.html&quot;&gt; 
+                            &lt;li&gt;
+                                &lt;img src=&quot;./img/3d1.png&quot; alt=&quot;&quot; uk-cover&gt;
+                                &lt;div class=&quot;uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium&quot;&gt;
+                                    &lt;h3 class=&quot;uk-margin-remove&quot;&gt;3D &amp; VR&lt;/h3&gt;
+                                    &lt;p class=&quot;uk-margin-remove&quot;&gt;授業課題で制作した3DモデリングとVR空間について&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                           &lt;/a&gt; 
+                        &lt;/ul&gt;
+                        &lt;a class=&quot;uk-position-center-left uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-previous uk-slideshow-item=&quot;previous&quot;&gt;&lt;/a&gt;
+                        &lt;a class=&quot;uk-position-center-right uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-next uk-slideshow-item=&quot;next&quot;&gt;&lt;/a&gt;
+                    &lt;/div&gt;</code>
+                </pre>
+            </ul>
+          <li>ページの一番下に著作権について記述する。</li>
+          　<ul>
+              <li>uk-card-secondaryを使って周りと区別がつくように色分けした。</li>
+              <li>CC BY-SA 4.0の公式サイトへのリンクも設置した。</li>
+              <li>このタグは全てのページにペーストする。</li>
+              <pre>
+                  <code>      &lt;div class=&quot;uk-card uk-card-secondary uk-card-large uk-card-body uk-width-1-1@m&quot;&gt;
+                    &lt;p&gt;(C)2021 IBUKI SHIBAYAMA&lt;/p&gt;
+                    &lt;p&gt;&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;CC BY-SA 4.0&lt;/a&gt;&lt;/p&gt;
+                  &lt;/div&gt;</code>
+              </pre>
+          </ul>
+        </ul>
+       <h2>aboutme.html</h2>
+        <ul>
+         <li>サイドナビゲーションバーを作る。</li>
+         　<ul>
+             <li>uk-offcanvas-barのナビゲーションバーが、uk-stickyでページに追従するように設定したuk-buttonをクリックすることで表示できるようにした。</li>
+             <li>このタグはindex.html、final-docs.html以外のページでも適用することにした。</li>
+             <pre>
+                 <cpde> &lt;div uk-sticky=&quot;bottom: #offset&quot;&gt;
+                    &lt;button class=&quot;uk-button uk-button-default uk-margin-small-right&quot; type=&quot;button&quot; uk-toggle=&quot;target: #offcanvas-usage&quot;&gt;MENU&lt;/button&gt;
+                     &lt;div id=&quot;offcanvas-usage&quot; uk-offcanvas&gt;
+                         &lt;div class=&quot;uk-offcanvas-bar&quot;&gt;
+                             &lt;button class=&quot;uk-offcanvas-close&quot; type=&quot;button&quot; uk-close&gt;&lt;/button&gt;
+                             &lt;a href=&quot;./index.html&quot;&gt;&lt;h3&gt;HOME&lt;/h3&gt;&lt;/a&gt;
+                             &lt;a href=&quot;./aboutme.html&quot;&gt;&lt;h3&gt;About Me&lt;/h3&gt;&lt;/a&gt;
+                             &lt;h3&gt;Works&lt;/h3&gt;
+                             &lt;a href=&quot;./3ddesign.html&quot;&gt;&lt;p&gt;3D Design&lt;/p&gt;&lt;/a&gt;
+                             &lt;a href=&quot;./works/gis.html&quot;&gt;&lt;p&gt;GIS Study&lt;/p&gt;&lt;/a&gt;
+                             &lt;a href=&quot;./works/movies.html&quot;&gt;&lt;p&gt;Movies&lt;/p&gt;&lt;/a&gt;
+                             &lt;h3&gt;Hobby&lt;/h3&gt;
+                             &lt;a href=&quot;./gunpla.html&quot;&gt;&lt;p&gt;Gunpla&lt;/p&gt;&lt;/a&gt;
+                             &lt;a href=&quot;./final-docs.html&quot;&gt;&lt;h3&gt;Documentation&lt;/h3&gt;&lt;/a&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                   &lt;/div&gt;</cpde>
+             </pre>
+           </ul>
+         <li>トップの画像に動きをつける。</li>
+           <ul>
+               <li>uk-background-fixedを使って、トップの背景画像がスクロールに対して元の位置に留まるように設定した。</li>
+               <li>uk-buttonをこの上部に設置するか重ねるか迷ったが、後者の方がしっくり来たので重ねてみた。</li>
+               <pre>
+                   <code>&lt;div class=&quot;uk-background-fixed uk-background-center-center uk-height-medium&quot; style=&quot;background-image: url(./img/me2.jpg);&quot;&gt;</code>
+               </pre>
+           </ul>
+         <li>プロフィールを記述する。</li>
+           <ul>
+               <li>uk-cardを使って自己紹介文を載せる。index.htmlのデスクリプションと同様にアイコン、見出し、本文、関連サイトへのリンクを設置した。ここではuk-buttonでリンクできるようにしている。</li>
+               <pre>
+                   <code>        &lt;div class=&quot;uk-card uk-card-secondary&quot;&gt;
+                    &lt;div class=&quot;uk-card-header&quot;&gt;
+                        &lt;div class=&quot;uk-grid-small uk-flex-middle&quot; uk-grid&gt;
+                            &lt;div class=&quot;uk-width-auto&quot;&gt;
+                                &lt;img class=&quot;uk-border-circle&quot; width=&quot;40&quot; height=&quot;40&quot; src=&quot;./img/ibuki.jpg&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;uk-width-expand&quot;&gt;
+                                &lt;h3 class=&quot;uk-card-title uk-margin-remove-bottom&quot;&gt;IBUKI SHIBAUAMA&lt;/h3&gt;
+                                &lt;p class=&quot;uk-text-meta uk-margin-remove-top&quot;&gt;柴山息吹&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;uk-card-body&quot;&gt;
+                        &lt;p&gt;神奈川県相模原市出身。神奈川県立相模原高等学校を卒業し、青山学院大学地球社会共生学部に入学する。&lt;/p&gt;
+                        &lt;p&gt;現在は古橋研究室に所属し、空間情報の分野を中心に地球社会共生について研究をしている。&lt;/p&gt;
+                        &lt;p&gt;世界中のWebマップを編集しながら国際貢献を目指す学生団体YouthMappersの青山学院支部、YouthMappers AGUのメンバー。マッピングと、それを広めるための動画作成を行っている。&lt;/p&gt;
+                        &lt;p&gt;趣味はプラモデル、ラーメン屋巡り、映画・アニメ鑑賞など。&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;uk-card-footer&quot;&gt;
+                        &lt;a class=&quot;uk-button uk-button-default uk-margin-small-right uk-margin-small-top&quot; href=&quot;https://github.com/ibuki76&quot;&gt;Github&lt;/a&gt;
+                        &lt;a class=&quot;uk-button uk-button-default uk-margin-small-right uk-margin-small-top&quot; href=&quot;https://github.com/furuhashilab&quot;&gt;古橋研究室 Github&lt;/a&gt;
+                        &lt;a class=&quot;uk-button uk-button-default uk-margin-small-right uk-margin-small-top&quot; href=&quot;http://furuhashilab.com/&quot;&gt;古橋研究室 ホームページ&lt;/a&gt;
+                        &lt;a class=&quot;uk-button uk-button-default uk-margin-small-right uk-margin-small-top&quot; href=&quot;https://www.youtube.com/channel/UC7ibSx7RwsxQPGjHX0ab5TQ&quot;&gt;古橋研究室 Youtubeチャンネル&lt;/a&gt;
+                        &lt;a class=&quot;uk-button uk-button-default uk-margin-small-right uk-margin-small-top&quot; href=&quot;https://www.youtube.com/channel/UC84JZTsE1vB3mJMWnlnEpDA&quot;&gt;YouthMappers AGU Youtubeチャンネル&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</code>
+               </pre>
+           </ul>
+         <li>古橋研究室の位置情報を埋め込む。</li>
+           <ul>
+               <li>iframeを使ってGoogle Mapを埋め込む。iframeのコードは「共有」から「地図を埋め込む」を選択してコピーする。</li>
+               <img data-src="./img/doc1.png" width=50% uk-img>
+               <li>そのままではレスポンシブでなかったので、スタイルシートfinal.cssでiframe用のサイズ設定を記述し、プロフィールなどサイズ変更が合うようにした。</li>
+               <ul>
+                   <li>HTML</li>
+                   <pre>
+                       <code>        &lt;div class=&quot;google-map&quot;&gt;
+                        &lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d630.4600897870257!2d139.40312803580736!3d35.56637618735245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018fdb26f108c3b%3A0x2479eab168bb38cd!2z5Y-k5qmL56CU56m25a6k!5e0!3m2!1sja!2sjp!4v1627432024636!5m2!1sja!2sjp&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+                    &lt;/div&gt;</code>
+                   </pre>
+                   <li>CSS</li>
+                   <pre>
+                       <code>.google-map {
+                        position: relative;
+                        width: 100%;
+                        height: 0;
+                        padding-bottom: 56.25%;
+                        overflow: hidden;
+                    }
+                    .google-map iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }</code>
+                   </pre>
+               </ul>
+           </ul>
+        </ul>
+       <h2>gis.html</h2>
+        <ul>
+         <li>Mapboxを埋め込む。</li>
+          <ul>
+              <li>Mapbox Studioでデザインした地図をifrmaeを使って埋め込んだ。今回はurlをコピーし、srcにペーストした。cssもaboutme.htmlと同じものを使った。</li>
+              <img data-src="./img/doc2.png" width=50% uk-img>
+              <pre>
+                  <code>                     &lt;div class=&quot;google-map&quot;&gt;
+                    &lt;iframe src=&quot;https://api.mapbox.com/styles/v1/ibuki76/ckp6mza3m3oex17mzg4ulyndu.html?fresh=true&amp;title=view&amp;access_token=pk.eyJ1IjoiaWJ1a2k3NiIsImEiOiJja3A2bHQxdTUwczN6Mnh0ODZkNXg3cjVkIn0.jmbucxRydrTnpIUztsMOwg&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+                &lt;/div&gt;</code>
+              </pre>
+          </ul>
+         <li>OSMを埋め込む。</li>
+          <ul>
+              <li>OSMは「共有」から「HTML」を選択することでiframeのタグごとコピーできる。</li>
+              <img data-src="./img/doc3.png" width=50% uk-img>
+              <pre>
+                  <code>                    &lt;div class=&quot;google-map&quot;&gt;
+                    &lt;iframe width=&quot;425&quot; height=&quot;350&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=45.26212692260743%2C2.00634710290673%2C45.32049179077149%2C2.051208413871795&amp;amp;layer=mapnik&quot; style=&quot;border: 1px solid black&quot;&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;small&gt;&lt;a href=&quot;https://www.openstreetmap.org/#map=14/2.0288/45.2913&quot;&gt;大きな地図を表示&lt;/a&gt;&lt;/small&gt;
+                 &lt;/div&gt;</code>
+              </pre>
+          </ul>
+        </ul>
+       <h2>movies.html</h2>
+        <ul>
+         <li>YouTube動画を埋め込む。</li>
+          <ul>
+              <li>動画再生ページのタイトル付近の「共有」アイコンをクリックして「埋め込み」を選択し、iframeタグをコピーする。こちらもGoogle Mapのスタイルシートをそのまま使用した。</li>
+              <img data-src="./img/doc4.png" width=50% uk-img>
+              <pre>
+                  <code>                     &lt;div class=&quot;google-map&quot;&gt;
+                    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/zMyQzPomwbw&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+                 &lt;/div&gt;</code>
+              </pre>
+          </ul>   
+        </ul>
+       <h2>3ddesign.html</h2>
+        <ul>
+         <li>A-frameを埋め込む試み。</li>
+          <ul>
+              <li>Glitch上でのVRのコードはHTMLがまるごと書かれており、そのままiframeのコードは作れなかった。</li>
+              <li>一度丸ごとコピペしてVR表示画面のサイズを調節したが、headerの記述がUIkitのものと併用できないのか、VRが表示されなくなってしまうトラブルが生じた。</li>
+          </ul>
+         <li>VR空間をiframeとして埋め込む。</li>
+          <ul>
+              <li>そこで、VRを最大サイズで表示したページを別で作り、そのページをiframeを使って埋め込んで解決した。こちらもGoogle Mapのスタイルシートをそのまま使用した。</li>
+              <pre>
+                  <code>                     &lt;div class=&quot;google-map&quot;&gt;
+                    &lt;iframe src=&quot;./ramen2.html&quot;&gt;&lt;/iframe&gt;
+                 &lt;/div&gt;</code>
+              </pre>
+          </ul>
+        </ul>
+       <h2>gunpla.html</h2>
+        <ul>
+         <li>ガンプラの紹介をする。</li>
+          <ul>uk-card-media-leftを使って、画像とディスクリプションを横並びに配列させた。</ul>
+          <ul>uk-slideshowを使って、画像はスライドして変えられるようにした。始めは画像のサイズが狙い通りに定まらないトラブルがあったが、slideshowにratioの設定を加えることで解決した。</ul>
+          <pre>
+              <code>                  &lt;div class=&quot;uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin&quot; uk-grid&gt;
+                &lt;div class=&quot;uk-card-media-left uk-cover-container&quot;&gt;
+                  &lt;div class=&quot;uk-position-relative uk-visible-toggle uk-light&quot; tabindex=&quot;-1&quot; uk-slideshow=&quot;ratio: 1:1&quot;&gt;
+                      &lt;ul class=&quot;uk-slideshow-items&quot;&gt;
+                          &lt;li&gt;
+                              &lt;img src=&quot;./img/saza1.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;img src=&quot;./img/saza2.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;img src=&quot;./img/saza3.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;img src=&quot;./img/saza4.jpg&quot; alt=&quot;&quot; uk-cover&gt;
+                          &lt;/li&gt;
+                      &lt;/ul&gt;
+                      &lt;a class=&quot;uk-position-center-left uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-previous uk-slideshow-item=&quot;previous&quot;&gt;&lt;/a&gt;
+                      &lt;a class=&quot;uk-position-center-right uk-position-small uk-hidden-hover&quot; href=&quot;#&quot; uk-slidenav-next uk-slideshow-item=&quot;next&quot;&gt;&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                 &lt;div class=&quot;uk-card-body&quot;&gt;
+                    &lt;h3 class=&quot;uk-card-title&quot;&gt;RG SAZABI&lt;/h3&gt;
+                    &lt;p&gt;『機動戦士ガンダム 逆襲のシャア』で登場するモビルスーツ『サザビー』のRG 1/144スケールのプラモデルです。素組み、部分塗装は完了していて、これからウェザリングを行う予定です。&lt;/p&gt;
+                    &lt;a href=&quot;https://bandai-hobby.net/item/2330/&quot;&gt;BANDAI公式サイト&lt;/a&gt;
+                 &lt;/div&gt; 
+                &lt;/div&gt;
+             &lt;/div&gt;</code>
+          </pre>
+        </ul>
+      </ul>
+
+
+      <div class="uk-card uk-card-secondary uk-card-large uk-card-body uk-width-1-1@m">
+        <p>(C)2021 IBUKI SHIBAYAMA</p>
+        <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio | IBUKI SHIBAYAMA</title>
+        <link rel="stylesheet" href="../css/uikit.min.css" />
+        <script src="../js/uikit.min.js"></script>
+        <script src="../js/uikit-icons.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+        </script>
+    </head>
+    <body class="uk-background-muted">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="./index.html">Home</a></li>
+                    <li><a href="./aboutme.html">AboutMe</a></li>
+                    <li>
+                        <a href="">Works</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="./3ddesign.html">3D Design</a></li>
+                                <li><a href="./works/movies.html">Movies</a></li>
+                                <li><a href="./works/gis.html">GIS Study</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Hobby</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="./gunpla.html">Gunpla</a></li>
+                            </ul>
+                        </div> 
+                    </li>
+                    <li><a href="./final-docs.html">Documentation</a></li>
+                </ul>
+            </div>
+        </nav>
+      <div class="uk-cover-container" uk-height-viewport>  
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img data-src="./img/fpbg.jpg" width="1800" height="1200" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                </li>
+                <li>
+                    <img data-src="./img/nasa1.jpg" width="1800" height="1200" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                </li>
+                <li>
+                    <img data-src="./img/gundam.jpg" width="1800" height="1200" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                </li>
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+         <div class="uk-overlay uk-position-top uk-text-muted">
+            <h1>Portfolio</h1>
+            <h1>| IBUKI SHIBAYAMA</h1>
+         </div>
+        </div>
+
+      </div> 
+      <div class="uk-child-width-1-2@s" uk-grid> 
+       <div class="uk-card uk-card-default uk-width-1-2@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="40" height="40" src="./img/logomini.png">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">My Portfolio</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <p>大学の授業や研究室の活動での課題や制作物、趣味をつめこんだホームページです。</p>
+                <p>「柴山息吹とは何者なのか」「何をしているのか」を伝えることを目的に制作しています。</p>
+            </div>
+            <div class="uk-card-footer">
+                <a href="./aboutme.html" class="uk-button uk-button-text">About Me</a>
+            </div>
+       </div>
+       <div class="uk-card uk-card-default uk-width-1-2@m">
+        <div class="uk-card-header">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-expand">
+                    <h3 class="uk-card-title uk-margin-remove-bottom">Highlight Features</h3>
+                </div>
+            </div>
+        </div>
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+            <ul class="uk-slideshow-items">
+               <a href="./gunpla.html">
+                <li>
+                    <img src="./img/gunplamini.jpg" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">Hobby</h3>
+                        <p class="uk-margin-remove">趣味で制作しているプラモデルについて</p>
+                    </div>
+                </li>
+               </a>
+               <a href="./works/gis.html">
+                <li>
+                    <img src="./img/map1.jpg" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">GIS</h3>
+                        <p class="uk-margin-remove">空間情報に関する制作物について</p>
+                    </div>
+                </li>
+               </a>
+               <a href="./3ddesign.html"> 
+                <li>
+                    <img src="./img/3d1.png" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">3D & VR</h3>
+                        <p class="uk-margin-remove">授業課題で制作した3DモデリングとVR空間について</p>
+                    </div>
+                </li>
+               </a> 
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        </div>
+       </div>
+      </div>
+      <div class="uk-card uk-card-secondary uk-card-large uk-card-body uk-width-1-1@m">
+        <p>(C)2021 IBUKI SHIBAYAMA</p>
+        <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      </div>
+    </div>
+    </body>
+</html>
